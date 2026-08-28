@@ -6,7 +6,7 @@ function ContactHero() {
   return (
     <section
       id="contact"
-      className="bg-(--color-background-light-blue)"
+      className="bg-[var(--color-background-light-blue)]"
       aria-labelledby="contact-hero-title"
     >
       <Container>
@@ -19,11 +19,13 @@ function ContactHero() {
               title={
                 <>
                   We're Here to Help You{' '}
-                  <span className="text-(--color-emerald)">Move Better.</span>
+                  <span className="text-[var(--color-emerald)]">
+                    Move Better.
+                  </span>
                 </>
               }
-            description="Have a question or need to book an appointment? Reach out to us — we'd love to hear from you."
-          />
+              description="Have a question or need to book an appointment? Reach out to us — we'd love to hear from you."
+            />
           </div>
 
           {/* Image */}

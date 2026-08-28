@@ -29,15 +29,17 @@ function SectionHeading({
       {...props}
     >
       {eyebrow && (
-        <p className="mb-3 text-sm font-semibold tracking-[0.16em] text-(--color-emerald) uppercase">
+        <p className="mb-3 text-sm font-semibold tracking-[0.16em] text-[var(--color-emerald)] uppercase">
           {eyebrow}
         </p>
       )}
 
-      <h2 className="text-wrap break-words text-(--color-heading)">{title}</h2>
+      <h2 className="text-wrap wrap-break-word text-[var(--color-heading)]">
+        {title}
+      </h2>
 
       {description && (
-        <p className="mt-4 text-wrap break-words text-(--color-body)">
+        <p className="mt-4 text-wrap wrap-break-word text-[var(--color-body)]">
           {description}
         </p>
       )}

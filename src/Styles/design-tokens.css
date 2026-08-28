@@ -1,220 +1,220 @@
 :root {
-   /* =========================================================
+  /* =========================================================
      DR. VANITA'S COMPLETE PHYSIOTHERAPY
      DESIGN TOKENS
      ========================================================= */
 
-   /* =========================================================
+  /* =========================================================
      BRAND COLORS
      ========================================================= */
 
-   --color-primary-blue: #0f5cb8;
-   --color-secondary-blue: #2e7de9;
-   --color-dark-navy: #123b74;
-   --color-footer-navy: #0f2f63;
-   --color-copyright-navy: #0a2348;
+  --color-primary-blue: #0f5cb8;
+  --color-secondary-blue: #2e7de9;
+  --color-dark-navy: #123b74;
+  --color-footer-navy: #0f2f63;
+  --color-copyright-navy: #0a2348;
 
-   /* =========================================================
+  /* =========================================================
      ACCENT COLORS
      ========================================================= */
 
-   --color-emerald: #4caf50;
-   --color-soft-emerald: #7bc47f;
-   --color-emerald-light: #eef8ef;
+  --color-emerald: #4caf50;
+  --color-soft-emerald: #7bc47f;
+  --color-emerald-light: #eef8ef;
 
-   /* =========================================================
+  /* =========================================================
      BACKGROUND COLORS
      ========================================================= */
 
-   --color-white: #ffffff;
-   --color-background-soft: #f7fafd;
-   --color-background-light-blue: #eef6ff;
+  --color-white: #ffffff;
+  --color-background-soft: #f7fafd;
+  --color-background-light-blue: #eef6ff;
 
-   /* =========================================================
+  /* =========================================================
      TEXT COLORS
      ========================================================= */
 
-   --color-heading: #123b74;
-   --color-heading-secondary: #184d91;
-   --color-body: #5f6f81;
-   --color-muted: #8795a5;
-   --color-text-white: #ffffff;
+  --color-heading: #123b74;
+  --color-heading-secondary: #184d91;
+  --color-body: #5f6f81;
+  --color-muted: #8795a5;
+  --color-text-white: #ffffff;
 
-   /* =========================================================
+  /* =========================================================
      BORDER & DIVIDER COLORS
      ========================================================= */
 
-   --color-border: #dce6f2;
-   --color-divider: #e8eef5;
+  --color-border: #dce6f2;
+  --color-divider: #e8eef5;
 
-   /* =========================================================
+  /* =========================================================
      STATUS COLORS
      ========================================================= */
 
-   --color-success: #4caf50;
-   --color-warning: #f4b400;
-   --color-error: #e53935;
-   --color-info: #0f5cb8;
+  --color-success: #4caf50;
+  --color-warning: #f4b400;
+  --color-error: #e53935;
+  --color-info: #0f5cb8;
 
-   /* =========================================================
+  /* =========================================================
      SOCIAL COLORS
      ========================================================= */
 
-   --color-whatsapp: #25d366;
+  --color-whatsapp: #25d366;
 
-   /* =========================================================
+  /* =========================================================
      TYPOGRAPHY
      ========================================================= */
 
-   --font-heading: 'Poppins', sans-serif;
-   --font-body: 'Inter', sans-serif;
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
 
-   /* Heading sizes */
-   --font-size-h1-desktop: 52px;
-   --font-size-h1-mobile: 38px;
-   --font-size-h2: 40px;
-   --font-size-h3: 28px;
-   --font-size-h4: 22px;
+  /* Heading sizes */
+  --font-size-h1-desktop: 52px;
+  --font-size-h1-mobile: 38px;
+  --font-size-h2: 40px;
+  --font-size-h3: 28px;
+  --font-size-h4: 22px;
 
-   /* Body sizes */
-   --font-size-body-large: 18px;
-   --font-size-body: 16px;
-   --font-size-body-small: 14px;
-   --font-size-caption: 12px;
+  /* Body sizes */
+  --font-size-body-large: 18px;
+  --font-size-body: 16px;
+  --font-size-body-small: 14px;
+  --font-size-caption: 12px;
 
-   /* UI sizes */
-   --font-size-navigation: 15px;
-   --font-size-button: 15px;
-   --font-size-label: 14px;
-   --font-size-overline: 12px;
+  /* UI sizes */
+  --font-size-navigation: 15px;
+  --font-size-button: 15px;
+  --font-size-label: 14px;
+  --font-size-overline: 12px;
 
-   /* =========================================================
+  /* =========================================================
      LINE HEIGHTS
      ========================================================= */
 
-   --line-height-h1-desktop: 62px;
-   --line-height-h1-mobile: 46px;
-   --line-height-h2: 50px;
-   --line-height-h3: 36px;
-   --line-height-h4: 30px;
+  --line-height-h1-desktop: 62px;
+  --line-height-h1-mobile: 46px;
+  --line-height-h2: 50px;
+  --line-height-h3: 36px;
+  --line-height-h4: 30px;
 
-   --line-height-body-large: 30px;
-   --line-height-body: 26px;
-   --line-height-body-small: 22px;
-   --line-height-caption: 18px;
+  --line-height-body-large: 30px;
+  --line-height-body: 26px;
+  --line-height-body-small: 22px;
+  --line-height-caption: 18px;
 
-   --line-height-navigation: 24px;
-   --line-height-button: 22px;
-   --line-height-label: 20px;
-   --line-height-overline: 18px;
+  --line-height-navigation: 24px;
+  --line-height-button: 22px;
+  --line-height-label: 20px;
+  --line-height-overline: 18px;
 
-   /* =========================================================
+  /* =========================================================
      FONT WEIGHTS
      ========================================================= */
 
-   --font-weight-regular: 400;
-   --font-weight-medium: 500;
-   --font-weight-semibold: 600;
-   --font-weight-bold: 700;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
 
-   /* =========================================================
+  /* =========================================================
      SPACING
      ========================================================= */
 
-   --space-4: 4px;
-   --space-8: 8px;
-   --space-12: 12px;
-   --space-16: 16px;
-   --space-24: 24px;
-   --space-32: 32px;
-   --space-40: 40px;
-   --space-48: 48px;
-   --space-64: 64px;
-   --space-80: 80px;
-   --space-96: 96px;
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-64: 64px;
+  --space-80: 80px;
+  --space-96: 96px;
 
-   /* =========================================================
+  /* =========================================================
      BORDER RADIUS
      ========================================================= */
 
-   --radius-small: 8px;
-   --radius-button: 10px;
-   --radius-medium: 12px;
-   --radius-large: 16px;
-   --radius-card: 18px;
-   --radius-xl: 24px;
-   --radius-pill: 999px;
+  --radius-small: 8px;
+  --radius-button: 10px;
+  --radius-medium: 12px;
+  --radius-large: 16px;
+  --radius-card: 18px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
 
-   /* =========================================================
+  /* =========================================================
      BORDERS
      ========================================================= */
 
-   --border-width-thin: 1px;
-   --border-width-medium: 1.5px;
-   --border-width-thick: 2px;
+  --border-width-thin: 1px;
+  --border-width-medium: 1.5px;
+  --border-width-thick: 2px;
 
-   /* =========================================================
+  /* =========================================================
      SHADOWS
      ========================================================= */
 
-   --shadow-card: 0 10px 40px rgba(20, 60, 120, 0.08);
-   --shadow-button: 0 10px 24px rgba(15, 92, 184, 0.15);
-   --shadow-elevated: 0 16px 48px rgba(20, 60, 120, 0.12);
+  --shadow-card: 0 10px 40px rgba(20, 60, 120, 0.08);
+  --shadow-button: 0 10px 24px rgba(15, 92, 184, 0.15);
+  --shadow-elevated: 0 16px 48px rgba(20, 60, 120, 0.12);
 
-   /* =========================================================
+  /* =========================================================
      GRADIENTS
      ========================================================= */
 
-   --gradient-hero: linear-gradient(180deg, #ffffff 0%, #eef6ff 100%);
+  --gradient-hero: linear-gradient(180deg, #ffffff 0%, #eef6ff 100%);
 
-   --gradient-button: linear-gradient(135deg, #0f5cb8 0%, #2e7de9 100%);
+  --gradient-button: linear-gradient(135deg, #0f5cb8 0%, #2e7de9 100%);
 
-   /* =========================================================
+  /* =========================================================
      LAYOUT
      ========================================================= */
 
-   --container-max-width: 1280px;
+  --container-max-width: 1280px;
 
-   --container-padding-desktop: 80px;
-   --container-padding-tablet: 32px;
-   --container-padding-mobile: 20px;
+  --container-padding-desktop: 80px;
+  --container-padding-tablet: 32px;
+  --container-padding-mobile: 20px;
 
-   /* =========================================================
+  /* =========================================================
      SECTION SPACING
      ========================================================= */
 
-   --section-padding-desktop: 80px;
-   --section-padding-tablet: 64px;
-   --section-padding-mobile: 48px;
+  --section-padding-desktop: 80px;
+  --section-padding-tablet: 64px;
+  --section-padding-mobile: 48px;
 
-   /* =========================================================
+  /* =========================================================
      GRID
      ========================================================= */
 
-   --grid-columns-desktop: 12;
-   --grid-columns-tablet: 8;
-   --grid-columns-mobile: 4;
+  --grid-columns-desktop: 12;
+  --grid-columns-tablet: 8;
+  --grid-columns-mobile: 4;
 
-   --grid-gutter-desktop: 24px;
-   --grid-gutter-tablet: 20px;
-   --grid-gutter-mobile: 16px;
+  --grid-gutter-desktop: 24px;
+  --grid-gutter-tablet: 20px;
+  --grid-gutter-mobile: 16px;
 
-   /* =========================================================
+  /* =========================================================
      TRANSITIONS
      ========================================================= */
 
-   --transition-fast: 150ms ease;
-   --transition-normal: 250ms ease;
-   --transition-slow: 350ms ease;
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow: 350ms ease;
 
-   /* =========================================================
+  /* =========================================================
      Z-INDEX
      ========================================================= */
 
-   --z-header: 1000;
-   --z-dropdown: 1100;
-   --z-modal: 1200;
-   --z-toast: 1300;
+  --z-header: 1000;
+  --z-dropdown: 1100;
+  --z-modal: 1200;
+  --z-toast: 1300;
 }
 
 /* =========================================================
@@ -222,107 +222,107 @@
    ========================================================= */
 
 .contact-calendar .rdp-root {
-   --rdp-accent-color: var(--color-primary-blue);
-   --rdp-accent-background-color: var(--color-background-light-blue);
+  --rdp-accent-color: var(--color-primary-blue);
+  --rdp-accent-background-color: var(--color-background-light-blue);
 
-   --rdp-day-height: 36px;
-   --rdp-day-width: 36px;
+  --rdp-day-height: 36px;
+  --rdp-day-width: 36px;
 
-   --rdp-day_button-height: 36px;
-   --rdp-day_button-width: 36px;
+  --rdp-day_button-height: 36px;
+  --rdp-day_button-width: 36px;
 
-   --rdp-nav-height: 36px;
-   --rdp-nav_button-height: 36px;
-   --rdp-nav_button-width: 36px;
+  --rdp-nav-height: 36px;
+  --rdp-nav_button-height: 36px;
+  --rdp-nav_button-width: 36px;
 
-   --rdp-selected-border: none;
-   --rdp-today-color: var(--color-emerald);
+  --rdp-selected-border: none;
+  --rdp-today-color: var(--color-emerald);
 }
 
 .contact-calendar {
-   border-radius: var(--radius-card);
-   box-shadow: var(--shadow-elevated);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-elevated);
 }
 
 /* Month title */
 .contact-calendar .rdp-month_caption {
-   font-family: var(--font-heading);
-   font-size: var(--font-size-body-small);
-   font-weight: var(--font-weight-semibold);
-   color: var(--color-heading);
+  font-family: var(--font-heading);
+  font-size: var(--font-size-body-small);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-heading);
 }
 
 /* Weekday labels */
 .contact-calendar .rdp-weekday {
-   font-family: var(--font-body);
-   font-size: var(--font-size-caption);
-   font-weight: var(--font-weight-semibold);
-   color: var(--color-muted);
-   text-transform: uppercase;
+  font-family: var(--font-body);
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-muted);
+  text-transform: uppercase;
 }
 
 /* Calendar days */
 .contact-calendar .rdp-day_button {
-   border-radius: var(--radius-pill);
-   font-family: var(--font-body);
-   font-size: var(--font-size-body-small);
-   color: var(--color-heading);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-size: var(--font-size-body-small);
+  color: var(--color-heading);
 
-   transition:
-      background-color var(--transition-fast),
-      color var(--transition-fast);
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast);
 }
 
 /* Hover */
 .contact-calendar .rdp-day_button:hover {
-   background-color: var(--color-background-light-blue);
-   color: var(--color-primary-blue);
+  background-color: var(--color-background-light-blue);
+  color: var(--color-primary-blue);
 }
 
 /* Selected date */
 .contact-calendar .rdp-selected .rdp-day_button {
-   background-color: var(--color-primary-blue);
-   color: var(--color-white);
-   border: none;
+  background-color: var(--color-primary-blue);
+  color: var(--color-white);
+  border: none;
 }
 
 /* Today */
 .contact-calendar .rdp-today .rdp-day_button {
-   color: var(--color-emerald);
-   font-weight: var(--font-weight-bold);
+  color: var(--color-emerald);
+  font-weight: var(--font-weight-bold);
 }
 
 /* Today + selected */
 .contact-calendar .rdp-selected.rdp-today .rdp-day_button {
-   color: var(--color-white);
+  color: var(--color-white);
 }
 
 /* Previous / next month days */
 .contact-calendar .rdp-outside .rdp-day_button {
-   color: var(--color-muted);
-   opacity: 0.4;
+  color: var(--color-muted);
+  opacity: 0.4;
 }
 
 /* Disabled dates */
 .contact-calendar .rdp-disabled .rdp-day_button {
-   color: var(--color-muted);
-   opacity: 0.35;
-   cursor: not-allowed;
+  color: var(--color-muted);
+  opacity: 0.35;
+  cursor: not-allowed;
 }
 
 /* Previous / next buttons */
 .contact-calendar .rdp-button_previous,
 .contact-calendar .rdp-button_next {
-   border-radius: var(--radius-pill);
-   color: var(--color-heading);
+  border-radius: var(--radius-pill);
+  color: var(--color-heading);
 
-   transition:
-      background-color var(--transition-fast),
-      color var(--transition-fast);
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast);
 }
 
 .contact-calendar .rdp-button_previous:hover,
 .contact-calendar .rdp-button_next:hover {
-   background-color: var(--color-background-light-blue);
-   color: var(--color-primary-blue);
+  background-color: var(--color-background-light-blue);
+  color: var(--color-primary-blue);
 }

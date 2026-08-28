@@ -22,11 +22,11 @@ function ContactFeatureCard({
       </div>
 
       <div className="min-w-0 flex-1">
-        <p className="text-[15px] leading-5 font-bold text-(--color-heading)">
+        <p className="text-[15px] leading-5 font-bold text-[var(--color-heading)]">
           {title}
         </p>
 
-        <p className="mt-1 text-[13px] leading-[1.45] text-(--color-body)">
+        <p className="mt-1 text-[13px] leading-[1.45] text-[var(--color-body)]">
           {description}
         </p>
       </div>

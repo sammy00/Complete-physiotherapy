@@ -29,9 +29,9 @@ interface FormErrors {
 }
 
 const inputClassName =
-  'min-h-10 w-full rounded-(--radius-small) border border-(--color-border) bg-white py-2 pr-4 pl-10 text-sm text-(--color-heading) transition-colors outline-none placeholder:text-(--color-muted) focus:border-(--color-primary-blue) focus:ring-2 focus:ring-(--color-primary-blue)/10'
+  'min-h-10 w-full rounded-[var(--radius-small)] border border-[var(--color-border)] bg-white py-2 pr-4 pl-10 text-sm text-[var(--color-heading)] transition-colors outline-none placeholder:text-[var(--color-muted)] focus:border-[var(--color-primary-blue)] focus:ring-2 focus:ring-[var(--color-primary-blue)]/10'
 
-const requiredMark = <span className="text-(--color-error)"> *</span>
+const requiredMark = <span className="text-[var(--color-error)]"> *</span>
 
 function ContactForm() {
   const [selectedDate, setSelectedDate] = useState<Date | undefined>()
@@ -176,20 +176,20 @@ function ContactForm() {
     <div className="h-full min-w-0">
       {/* Section Heading */}
       <div className="mb-5">
-        <p className="mb-2 text-xs font-bold tracking-[0.14em] text-(--color-emerald) uppercase">
+        <p className="mb-2 text-xs font-bold tracking-[0.14em] text-[var(--color-emerald)] uppercase">
           Contact Us
         </p>
 
         <h2
           id="contact-form-heading"
-          className="text-3xl leading-tight text-(--color-heading) md:text-4xl"
+          className="text-3xl leading-tight text-[var(--color-heading)] md:text-4xl"
         >
           Book Your Consultation
         </h2>
 
-        <div className="my-3 h-0.75 w-10 rounded-full bg-(--color-emerald)" />
+        <div className="my-3 h-[3px] w-10 rounded-full bg-[var(--color-emerald)]" />
 
-        <p className="text-sm text-(--color-body)">
+        <p className="text-sm text-[var(--color-body)]">
           Fill in the form and we'll confirm your appointment shortly.
         </p>
       </div>
@@ -197,14 +197,14 @@ function ContactForm() {
       {/* Success Message */}
       {isSubmitted && (
         <div
-          className="mb-6 rounded-(--radius-card) border border-(--color-emerald)/30 bg-(--color-emerald)/10 px-5 py-4 text-center"
+          className="mb-6 rounded-[var(--radius-card)] border border-[var(--color-emerald)]/30 bg-[var(--color-emerald)]/10 px-5 py-4 text-center"
           role="status"
         >
-          <p className="font-semibold text-(--color-heading)">
+          <p className="font-semibold text-[var(--color-heading)]">
             Appointment request received!
           </p>
 
-          <p className="mt-1 text-sm text-(--color-body)">
+          <p className="mt-1 text-sm text-[var(--color-body)]">
             Thank you. We'll contact you shortly to confirm your appointment.
           </p>
         </div>
@@ -213,7 +213,7 @@ function ContactForm() {
       {/* Error Message */}
       {submitError && (
         <div
-          className="mb-6 rounded-(--radius-card) border border-red-200 bg-red-50 px-5 py-4 text-center"
+          className="mb-6 rounded-[var(--radius-card)] border border-red-200 bg-red-50 px-5 py-4 text-center"
           role="alert"
         >
           <p className="font-semibold text-red-700">
@@ -231,7 +231,7 @@ function ContactForm() {
           <div>
             <label
               htmlFor="firstName"
-              className="mb-2 block text-sm font-semibold text-(--color-heading)"
+              className="mb-2 block text-sm font-semibold text-[var(--color-heading)]"
             >
               First Name{requiredMark}
             </label>
@@ -241,7 +241,7 @@ function ContactForm() {
                 size={18}
                 strokeWidth={1.8}
                 aria-hidden="true"
-                className="absolute top-1/2 left-3.5 -translate-y-1/2 text-(--color-muted)"
+                className="absolute top-1/2 left-3.5 -translate-y-1/2 text-[var(--color-muted)]"
               />
 
               <input
@@ -270,7 +270,7 @@ function ContactForm() {
           <div>
             <label
               htmlFor="lastName"
-              className="mb-2 block text-sm font-semibold text-(--color-heading)"
+              className="mb-2 block text-sm font-semibold text-[var(--color-heading)]"
             >
               Last Name{requiredMark}
             </label>
@@ -280,7 +280,7 @@ function ContactForm() {
                 size={18}
                 strokeWidth={1.8}
                 aria-hidden="true"
-                className="absolute top-1/2 left-3.5 -translate-y-1/2 text-(--color-muted)"
+                className="absolute top-1/2 left-3.5 -translate-y-1/2 text-[var(--color-muted)]"
               />
 
               <input
@@ -309,25 +309,25 @@ function ContactForm() {
           <div>
             <label
               htmlFor="phone"
-              className="mb-2 block text-sm font-semibold text-(--color-heading)"
+              className="mb-2 block text-sm font-semibold text-[var(--color-heading)]"
             >
               Phone Number{requiredMark}
             </label>
 
-            <div className="flex min-h-10 overflow-hidden rounded-(--radius-small) border border-(--color-border) bg-white transition-colors focus-within:border-(--color-primary-blue) focus-within:ring-2 focus-within:ring-(--color-primary-blue)/10">
-              <div className="flex shrink-0 items-center gap-2 border-r border-(--color-border) px-3 text-sm text-(--color-heading)">
+            <div className="flex min-h-10 overflow-hidden rounded-[var(--radius-small)] border border-[var(--color-border)] bg-white transition-colors focus-within:border-[var(--color-primary-blue)] focus-within:ring-2 focus-within:ring-[var(--color-primary-blue)]/10">
+              <div className="flex shrink-0 items-center gap-2 border-r border-[var(--color-border)] px-3 text-sm text-[var(--color-heading)]">
                 <Phone
                   size={17}
                   strokeWidth={1.8}
                   aria-hidden="true"
-                  className="text-(--color-muted)"
+                  className="text-[var(--color-muted)]"
                 />
                 <span>IN</span>
                 <ChevronDown
                   size={14}
                   strokeWidth={2}
                   aria-hidden="true"
-                  className="text-(--color-muted)"
+                  className="text-[var(--color-muted)]"
                 />
               </div>
 
@@ -337,11 +337,11 @@ function ContactForm() {
                 type="tel"
                 autoComplete="tel"
                 inputMode="numeric"
-                placeholder="+91 99254 18176"
+                placeholder="+91 99131 40892"
                 required
                 aria-invalid={Boolean(errors.phone)}
                 aria-describedby={errors.phone ? 'phone-error' : undefined}
-                className="min-w-0 flex-1 border-0 bg-white px-3 py-2 text-sm text-(--color-heading) outline-none placeholder:text-(--color-muted)"
+                className="min-w-0 flex-1 border-0 bg-white px-3 py-2 text-sm text-[var(--color-heading)] outline-none placeholder:text-[var(--color-muted)]"
               />
             </div>
 
@@ -356,7 +356,7 @@ function ContactForm() {
           <div>
             <label
               htmlFor="email"
-              className="mb-2 block text-sm font-semibold text-(--color-heading)"
+              className="mb-2 block text-sm font-semibold text-[var(--color-heading)]"
             >
               Email Address{requiredMark}
             </label>
@@ -366,7 +366,7 @@ function ContactForm() {
                 size={18}
                 strokeWidth={1.8}
                 aria-hidden="true"
-                className="absolute top-1/2 left-3.5 -translate-y-1/2 text-(--color-muted)"
+                className="absolute top-1/2 left-3.5 -translate-y-1/2 text-[var(--color-muted)]"
               />
 
               <input
@@ -393,7 +393,7 @@ function ContactForm() {
           <div className="md:col-span-2">
             <label
               htmlFor="condition"
-              className="mb-2 block text-sm font-semibold text-(--color-heading)"
+              className="mb-2 block text-sm font-semibold text-[var(--color-heading)]"
             >
               Condition / Problem{requiredMark}
             </label>
@@ -403,13 +403,13 @@ function ContactForm() {
                 size={18}
                 strokeWidth={1.8}
                 aria-hidden="true"
-                className="pointer-events-none absolute top-1/2 left-3.5 z-10 -translate-y-1/2 text-(--color-muted)"
+                className="pointer-events-none absolute top-1/2 left-3.5 z-10 -translate-y-1/2 text-[var(--color-muted)]"
               />
               <ChevronDown
                 size={18}
                 strokeWidth={1.8}
                 aria-hidden="true"
-                className="pointer-events-none absolute top-1/2 right-4 z-10 -translate-y-1/2 text-(--color-muted)"
+                className="pointer-events-none absolute top-1/2 right-4 z-10 -translate-y-1/2 text-[var(--color-muted)]"
               />
 
               <select
@@ -453,7 +453,7 @@ function ContactForm() {
           <div className="relative">
             <label
               htmlFor="preferredDate"
-              className="mb-2 block text-sm font-semibold text-(--color-heading)"
+              className="mb-2 block text-sm font-semibold text-[var(--color-heading)]"
             >
               Preferred Date{requiredMark}
             </label>
@@ -463,7 +463,7 @@ function ContactForm() {
                 size={18}
                 strokeWidth={1.8}
                 aria-hidden="true"
-                className="pointer-events-none absolute top-1/2 left-3.5 z-10 -translate-y-1/2 text-(--color-muted)"
+                className="pointer-events-none absolute top-1/2 left-3.5 z-10 -translate-y-1/2 text-[var(--color-muted)]"
               />
 
               <button
@@ -477,8 +477,8 @@ function ContactForm() {
                 <span
                   className={
                     selectedDate
-                      ? 'text-(--color-heading)'
-                      : 'text-(--color-muted)'
+                      ? 'text-[var(--color-heading)]'
+                      : 'text-[var(--color-muted)]'
                   }
                 >
                   {formattedDate || 'Select date'}
@@ -488,7 +488,7 @@ function ContactForm() {
 
             {isCalendarOpen && (
               <div
-                className="contact-calendar absolute top-full left-1/2 z-30 mt-2 w-[min(calc(100vw-2.5rem),22rem)] -translate-x-1/2 rounded-(--radius-card) border border-(--color-border) bg-white p-3 shadow-(--shadow-card) sm:left-0 sm:w-auto sm:translate-x-0 sm:p-4"
+                className="contact-calendar absolute top-full left-1/2 z-30 mt-2 w-[min(calc(100vw-2.5rem),22rem)] -translate-x-1/2 rounded-[var(--radius-card)] border border-[var(--color-border)] bg-white p-3 shadow-[var(--shadow-card)] sm:left-0 sm:w-auto sm:translate-x-0 sm:p-4"
                 role="dialog"
                 aria-label="Choose date"
               >
@@ -530,7 +530,7 @@ function ContactForm() {
           <div>
             <label
               htmlFor="preferredTime"
-              className="mb-2 block text-sm font-semibold text-(--color-heading)"
+              className="mb-2 block text-sm font-semibold text-[var(--color-heading)]"
             >
               Preferred Time{requiredMark}
             </label>
@@ -540,13 +540,13 @@ function ContactForm() {
                 size={18}
                 strokeWidth={1.8}
                 aria-hidden="true"
-                className="pointer-events-none absolute top-1/2 left-3.5 z-10 -translate-y-1/2 text-(--color-muted)"
+                className="pointer-events-none absolute top-1/2 left-3.5 z-10 -translate-y-1/2 text-[var(--color-muted)]"
               />
               <ChevronDown
                 size={18}
                 strokeWidth={1.8}
                 aria-hidden="true"
-                className="pointer-events-none absolute top-1/2 right-4 z-10 -translate-y-1/2 text-(--color-muted)"
+                className="pointer-events-none absolute top-1/2 right-4 z-10 -translate-y-1/2 text-[var(--color-muted)]"
               />
 
               <select
@@ -580,10 +580,10 @@ function ContactForm() {
           <div className="md:col-span-2">
             <label
               htmlFor="message"
-              className="mb-2 block text-sm font-semibold text-(--color-heading)"
+              className="mb-2 block text-sm font-semibold text-[var(--color-heading)]"
             >
               Message{' '}
-              <span className="font-medium text-(--color-body)">
+              <span className="font-medium text-[var(--color-body)]">
                 (Optional)
               </span>
             </label>
@@ -593,7 +593,7 @@ function ContactForm() {
                 size={18}
                 strokeWidth={1.8}
                 aria-hidden="true"
-                className="pointer-events-none absolute top-3.5 left-3.5 text-(--color-muted)"
+                className="pointer-events-none absolute top-3.5 left-3.5 text-[var(--color-muted)]"
               />
 
               <textarea
@@ -608,11 +608,11 @@ function ContactForm() {
         </div>
 
         <div className="mt-3">
-          <label className="flex items-start gap-3 text-xs font-medium text-(--color-heading)">
+          <label className="flex items-start gap-3 text-xs font-medium text-[var(--color-heading)]">
             <input
               type="checkbox"
               name="privacy"
-              className="mt-0.5 h-4 w-4 shrink-0 rounded border-(--color-border) accent-(--color-primary-blue)"
+              className="mt-0.5 h-4 w-4 shrink-0 rounded border-[var(--color-border)] accent-[var(--color-primary-blue)]"
               aria-invalid={Boolean(errors.privacy)}
               aria-describedby={errors.privacy ? 'privacy-error' : undefined}
             />
@@ -620,7 +620,7 @@ function ContactForm() {
               I agree to the{' '}
               <a
                 href="#privacy"
-                className="text-(--color-primary-blue) underline underline-offset-2"
+                className="text-[var(--color-primary-blue)] underline underline-offset-2"
               >
                 Privacy policy.
               </a>

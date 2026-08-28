@@ -16,7 +16,7 @@ function ContactInfoCard({
   children,
   actionLabel,
   actionHref,
-  iconClassName = 'bg-(--color-primary-blue)',
+  iconClassName = 'bg-[var(--color-primary-blue)]',
 }: ContactInfoCardProps) {
   return (
     <div className="flex min-w-0 items-start gap-4">
@@ -30,18 +30,18 @@ function ContactInfoCard({
 
       {/* Content */}
       <div className="min-w-0 flex-1">
-        <p className="text-[22px] leading-6 font-bold text-(--color-heading)">
+        <p className="text-[22px] leading-6 font-bold text-[var(--color-heading)]">
           {title}
         </p>
 
-        <div className="mt-1.5 text-sm leading-6 text-(--color-body)">
+        <div className="mt-1.5 text-sm leading-6 text-[var(--color-body)]">
           {children}
         </div>
 
         {actionLabel && actionHref && (
           <a
             href={actionHref}
-            className="group mt-3 inline-flex items-center gap-2 text-sm font-semibold text-(--color-heading) transition-colors duration-200 hover:text-(--color-primary-blue)"
+            className="group mt-3 inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-heading)] transition-colors duration-200 hover:text-[var(--color-primary-blue)]"
           >
             <span>{actionLabel}</span>
 

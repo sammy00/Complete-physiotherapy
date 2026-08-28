@@ -2,15 +2,16 @@ import { Mail, MapPin } from 'lucide-react'
 import { FaWhatsapp } from 'react-icons/fa'
 import Container from '../Ui/Container'
 import ContactInfoCard from './ContactInfoCard'
+import { whatsappUrl } from '../../Constants/contact'
 
 function ContactInfo() {
   return (
     <section aria-label="Contact information" className="relative z-10 -mt-6">
       <Container>
-        <div className="min-w-0 rounded-(--radius-card) bg-white p-4 shadow-(--shadow-card) sm:p-5 md:px-7 md:py-6">
+        <div className="min-w-0 rounded-[var(--radius-card)] bg-white p-4 shadow-[var(--shadow-card)] sm:p-5 md:px-7 md:py-6">
           <div className="grid min-w-0 gap-6 lg:grid-cols-3 lg:gap-0">
             {/* Clinic Address */}
-            <div className="min-w-0 lg:border-r lg:border-(--color-divider) lg:pr-6">
+            <div className="min-w-0 lg:border-r lg:border-[var(--color-divider)] lg:pr-6">
               <ContactInfoCard
                 title="Visit Our Clinic"
                 actionLabel="Get Directions"
@@ -30,21 +31,21 @@ function ContactInfo() {
             </div>
 
             {/* WhatsApp */}
-            <div className="min-w-0 lg:border-r lg:border-(--color-divider) lg:px-6">
+            <div className="min-w-0 lg:border-r lg:border-[var(--color-divider)] lg:px-6">
               <ContactInfoCard
                 title="WhatsApp Us"
                 actionLabel="Chat on WhatsApp"
-                actionHref="https://wa.me/919925418176"
-                iconClassName="bg-(--color-emerald)"
+                actionHref={whatsappUrl}
+                iconClassName="bg-[var(--color-emerald)]"
                 icon={<FaWhatsapp size={24} />}
               >
                 <a
-                  href="https://wa.me/919925418176"
+                  href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block transition-colors hover:text-(--color-primary-blue)"
+                  className="inline-block transition-colors hover:text-[var(--color-primary-blue)]"
                 >
-                  +91 99254 18176
+                  +91 99131 40892
                 </a>
               </ContactInfoCard>
             </div>
@@ -59,7 +60,7 @@ function ContactInfo() {
               >
                 <a
                   href="mailto:completephysio2018@gmail.com"
-                  className="inline-block max-w-full text-sm wrap-anywhere transition-colors hover:text-(--color-primary-blue)"
+                  className="inline-block max-w-full text-sm wrap-anywhere transition-colors hover:text-[var(--color-primary-blue)]"
                 >
                   completephysio2018@gmail.com
                 </a>

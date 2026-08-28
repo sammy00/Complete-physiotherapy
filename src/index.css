@@ -23,6 +23,7 @@ html {
   font-size: 16px;
   width: 100%;
   overflow-x: clip;
+  scrollbar-width: none;
 }
 
 body {
@@ -31,6 +32,8 @@ body {
   min-width: 320px;
   min-height: 100vh;
   overflow-x: clip;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 
   background-color: var(--color-white);
   color: var(--color-body);
@@ -38,6 +41,11 @@ body {
   font-family: var(--font-body);
   font-size: var(--font-size-body);
   line-height: var(--line-height-body);
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
 }
 
 /* =========================================================
