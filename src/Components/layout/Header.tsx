@@ -6,7 +6,7 @@ import Container from '../Ui/Container'
 
 const navigation = [
   { label: 'Home', href: '/home' },
-  { label: 'About', href: '/home#about' },
+  { label: 'About', href: '/about' },
   { label: 'Services', href: '/home#services' },
   { label: 'Reviews', href: '/home#reviews' },
   { label: 'Contact', href: '/contact' },
