@@ -7,6 +7,7 @@ import ScrollToHash from './Components/layout/ScrollToHash'
 import Homepage from './Pages/Homepage'
 import ContactPage from './Pages/ContactPage'
 import AboutPage from './Pages/AboutPage'
+import ServicesPage from './Pages/ServicesPage'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
 
         <Route path="/home" element={<Homepage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/services" element={<ServicesPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="*" element={<Navigate to="/home" replace />} />
       </Routes>

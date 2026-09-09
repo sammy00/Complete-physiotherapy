@@ -33,9 +33,18 @@ function ScrollToHash() {
     const timer = window.setTimeout(() => {
       const target = document.querySelector(hash)
 
-      target?.scrollIntoView({
+      if (!target) {
+        return
+      }
+
+      const targetStyles = window.getComputedStyle(target)
+      const scrollMarginTop = Number.parseFloat(targetStyles.scrollMarginTop) || 0
+      const targetTop =
+        target.getBoundingClientRect().top + window.scrollY - scrollMarginTop
+
+      window.scrollTo({
+        top: Math.max(targetTop, 0),
         behavior: 'smooth',
-        block: 'start',
       })
     }, 50)
 
