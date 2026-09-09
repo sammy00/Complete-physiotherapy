@@ -1,7 +1,6 @@
 import { CalendarCheck } from 'lucide-react'
 import { FaWhatsapp } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-
 import { whatsappUrl } from '../../Constants/contact'
 import Container from '../Ui/Container'
 
@@ -16,8 +15,7 @@ function AboutCTA() {
             aria-hidden="true"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-[rgba(15,92,184,0.45)] to-transparent" />
-
-            <div className="absolute bottom-[-6px] left-7 h-[calc(100%_+_4px)] aspect-square opacity-28 invert">
+            <div className="absolute bottom-[-6px] left-7 aspect-square h-[calc(100%_+_4px)] opacity-28 invert">
               <img
                 src="/icons/services/spinal-cord.svg"
                 alt=""

@@ -14,37 +14,37 @@ const services: Array<{
   {
     title: 'Back & Neck Pain Treatment',
     description: 'Relief from pain and improved mobility.',
-    iconSrc: '/icons/services/spine.svg',
+    iconSrc: '/icons/Home/spine.svg',
     tone: 'blue',
   },
   {
     title: 'Sports Injury Rehabilitation',
     description: 'Recover stronger and return to activity safely.',
-    iconSrc: '/icons/services/sports-injury.svg',
+    iconSrc: '/icons/Home/sports-injury.svg',
     tone: 'green',
   },
   {
     title: 'Post-Surgery Rehabilitation',
     description: 'Guided recovery to restore strength and function.',
-    iconSrc: '/icons/services/post-surgery.svg',
+    iconSrc: '/icons/Home/post-surgery.svg',
     tone: 'blue',
   },
   {
     title: 'Geriatric Care',
     description: 'Specialized care for mobility and independence.',
-    iconSrc: '/icons/services/geriatric-care.svg',
+    iconSrc: '/icons/Home/geriatric-care.svg',
     tone: 'green',
   },
   {
     title: 'Weight Loss & Fitness',
     description: 'Personalized programs for fitness, mobility and movement.',
-    iconSrc: '/icons/services/fitness.svg',
+    iconSrc: '/icons/Home/fitness.svg',
     tone: 'blue',
   },
   {
     title: "Women's Health Physiotherapy",
     description: "Personalized physiotherapy for women's health and wellbeing.",
-    iconSrc: '/icons/services/womens-health.svg',
+    iconSrc: '/icons/Home/womens-health.svg',
     tone: 'green',
   },
 ]

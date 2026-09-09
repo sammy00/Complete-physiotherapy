@@ -9,25 +9,25 @@ const stats: Array<{
   label: string
 }> = [
   {
-    iconSrc: '/icons/services/experience.svg',
+    iconSrc: '/icons/Home/experience.svg',
     tone: 'blue',
     value: '15+',
     label: 'Years of Experience',
   },
   {
-    iconSrc: '/icons/services/happy-patients.svg',
+    iconSrc: '/icons/Home/happy-patients.svg',
     tone: 'green',
     value: '5000+',
     label: 'Happy Patients',
   },
   {
-    iconSrc: '/icons/services/treatment-solutions.svg',
+    iconSrc: '/icons/Home/treatment-solutions.svg',
     tone: 'blue',
     value: '20+',
     label: 'Treatment Solutions',
   },
   {
-    iconSrc: '/icons/services/google-rating.svg',
+    iconSrc: '/icons/Home/google-rating.svg',
     tone: 'green',
     value: '4.9',
     label: 'Google Rating',

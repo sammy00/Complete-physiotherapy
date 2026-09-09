@@ -35,7 +35,7 @@ const approachSteps = [
     number: '03',
     title: 'Treat',
     description: 'Personalized treatment using advanced techniques.',
-    iconSrc: '/icons/services/Treatment.svg',
+    iconSrc: '/icons/About/Treatment.svg',
     tone: 'blue',
   },
   {

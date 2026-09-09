@@ -38,7 +38,7 @@ function HomeHero() {
             <div className="mt-7 flex flex-wrap items-center gap-3">
               <Link
                 to="/contact#appointment"
-                className="group/book-appointment inline-flex min-h-11 items-center justify-center gap-2 rounded-[var(--radius-small)] bg-[var(--color-primary-blue)] px-5 text-sm font-semibold text-white shadow-sm transition-colors duration-200 hover:bg-[var(--color-heading)] focus-visible:ring-2 focus-visible:ring-[var(--color-primary-blue)] focus-visible:ring-offset-2 focus-visible:outline-none"
+                className="group/book-appointment inline-flex min-h-11 items-center justify-center gap-2 rounded-[var(--radius-small)] bg-[var(--color-primary-blue)] px-5 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-[var(--color-heading)] focus-visible:ring-2 focus-visible:ring-[var(--color-primary-blue)] focus-visible:ring-offset-2 focus-visible:outline-none"
               >
                 <CalendarCheck
                   size={17}
@@ -53,14 +53,14 @@ function HomeHero() {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group/whatsapp inline-flex min-h-11 items-center justify-center gap-2 rounded-[var(--radius-small)] border border-[#25D366] bg-white px-5 text-sm font-semibold text-[#128C3A] transition-colors duration-200 hover:bg-[#25D366] focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 focus-visible:outline-none"
+                className="group/whatsapp inline-flex min-h-11 items-center justify-center gap-2 rounded-[var(--radius-small)] border border-[var(--color-emerald)] bg-white px-5 text-sm font-semibold text-[var(--color-emerald)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[var(--color-emerald-light)] focus-visible:ring-2 focus-visible:ring-[var(--color-emerald)] focus-visible:ring-offset-2 focus-visible:outline-none"
               >
                 <FaWhatsapp
                   size={18}
-                  className="text-[#128C3A] transition-colors duration-200 group-hover/whatsapp:text-white"
+                  className="text-[var(--color-emerald)]"
                   aria-hidden="true"
                 />
-                <span className="text-[#128C3A] transition-colors duration-200 group-hover/whatsapp:text-white">
+                <span className="text-[var(--color-emerald)]">
                   WhatsApp Us
                 </span>
               </a>
