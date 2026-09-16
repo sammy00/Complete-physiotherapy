@@ -8,6 +8,7 @@ import Homepage from './Pages/Homepage'
 import ContactPage from './Pages/ContactPage'
 import AboutPage from './Pages/AboutPage'
 import ServicesPage from './Pages/ServicesPage'
+import ReviewsPage from './Pages/ReviewsPage'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/home" element={<Homepage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/services" element={<ServicesPage />} />
+        <Route path="/reviews" element={<ReviewsPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="*" element={<Navigate to="/home" replace />} />
       </Routes>

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { ArrowRight, ChevronDown, Menu, X } from 'lucide-react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 
@@ -10,7 +10,7 @@ const navigation = [
   { label: 'Home', href: '/home' },
   { label: 'About', href: '/about' },
   { label: 'Services', href: '/services' },
-  { label: 'Reviews', href: '/home#reviews' },
+  { label: 'Reviews', href: '/reviews' },
   { label: 'Contact', href: '/contact' },
 ]
 
@@ -31,6 +31,26 @@ function Header() {
     setIsMenuOpen(false)
     navigate('/contact#appointment')
   }
+
+  useEffect(() => {
+    if (!isMenuOpen && !isServicesOpen && !isMobileServicesOpen) {
+      return
+    }
+
+    const closeMenusOnEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsMenuOpen(false)
+        setIsServicesOpen(false)
+        setIsMobileServicesOpen(false)
+      }
+    }
+
+    document.addEventListener('keydown', closeMenusOnEscape)
+
+    return () => {
+      document.removeEventListener('keydown', closeMenusOnEscape)
+    }
+  }, [isMenuOpen, isMobileServicesOpen, isServicesOpen])
 
   return (
     <header className="relative z-[var(--z-header)] border-b border-[var(--color-divider)] bg-white shadow-[0_2px_10px_rgba(15,47,99,0.05)]">

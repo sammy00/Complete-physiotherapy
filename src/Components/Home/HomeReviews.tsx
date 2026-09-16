@@ -6,7 +6,7 @@ import Container from '../Ui/Container'
 import SectionHeading from '../Ui/SectionHeading'
 
 const patientReviewsUrl =
-  'https://www.justdial.com/Vadodara/Complete-Physiotherapy-Near-Bright-Day-School-Opposite-Om-Petroleum-Oppsite-to-Esser-Petrol-Pump-Bhaili/0265PX265-X265-181123182323-U8S1_BZDET/reviews'
+  'https://www.google.com/search?q=Dr.Vanita%27s+complete+physiotherapy+Vadodara+Google+reviews#lrd=0x395fc79a24fcf62f:0xc4d8061bd3e1b0f6,1,,,,'
 
 interface Testimonial {
   name: string
