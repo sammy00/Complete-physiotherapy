@@ -50,7 +50,7 @@ function AboutHero() {
                 About hero physiotherapy image
               </p>
               <p className="mt-1 text-sm text-[var(--color-muted)]">
-                Client-provided image will be added here.
+                Physiotherapy care at the clinic
               </p>
             </div>
           </div>

@@ -44,7 +44,7 @@ function AboutTrust() {
 
             <ImagePlaceholder
               label="Clinic interior image"
-              description="Client-provided clinic image will be added here."
+              description="Comfortable physiotherapy clinic setting"
               className="min-h-[240px] bg-[var(--color-background-soft)] md:min-h-[280px] lg:min-h-[260px]"
             />
           </div>

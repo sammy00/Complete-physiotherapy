@@ -3,10 +3,16 @@ import ContactForm from '../Components/Contact/ContactForm'
 import ContactHero from '../Components/Contact/ContactHero'
 import ContactInfo from '../Components/Contact/ContactInfo'
 import ContactMap from '../Components/Contact/ContactMap'
+import Seo from '../Components/layout/Seo'
 
 function ContactPage() {
   return (
     <main>
+      <Seo
+        title="Contact"
+        description="Book an appointment with Dr. Vanita's Complete Physiotherapy in Vadodara or contact the clinic by phone, WhatsApp, email or map directions."
+        path="/contact"
+      />
       <ContactHero />
 
       <ContactInfo />

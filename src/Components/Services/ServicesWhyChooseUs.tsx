@@ -51,7 +51,7 @@ function ServicesWhyChooseUs() {
                 <Image size={24} strokeWidth={1.7} />
               </span>
               <p>Clinic treatment room image</p>
-              <span>Client-provided clinic image will be added here.</span>
+              <span>Modern physiotherapy treatment space</span>
             </div>
           </div>
 

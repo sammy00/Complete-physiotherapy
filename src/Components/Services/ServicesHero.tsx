@@ -92,7 +92,7 @@ function ServicesHero() {
                 </p>
 
                 <p className="mt-1 text-sm text-[var(--color-muted)]">
-                  Client-provided treatment image will be added here.
+                  Personalized treatment and recovery care
                 </p>
               </div>
             </div>

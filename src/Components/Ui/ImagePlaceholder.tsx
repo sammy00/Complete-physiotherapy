@@ -7,8 +7,8 @@ interface ImagePlaceholderProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 function ImagePlaceholder({
-  label = 'Image Placeholder',
-  description = 'Client-provided image will be added here.',
+  label = 'Physiotherapy image',
+  description = 'Clinic photography area',
   className = '',
   ...props
 }: ImagePlaceholderProps) {

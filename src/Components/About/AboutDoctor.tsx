@@ -44,7 +44,7 @@ function AboutDoctor() {
           <div className="grid gap-8 lg:grid-cols-[400px_minmax(0,520px)_285px] lg:items-start">
             <ImagePlaceholder
               label="Dr. Vanita photo"
-              description="Client-provided doctor image will be added here."
+              description="Senior physiotherapist profile"
               className="min-h-[380px] bg-[var(--color-background-soft)]"
             />
 

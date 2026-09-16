@@ -31,7 +31,7 @@ function ContactHero() {
           {/* Image */}
           <ImagePlaceholder
             label="Physiotherapy Clinic Image"
-            description="Client-provided image will be added here."
+            description="Clinic visit and consultation area"
             className="min-h-64 md:min-h-72 lg:min-h-80"
           />
         </div>

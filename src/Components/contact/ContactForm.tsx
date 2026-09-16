@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import type { FormEvent } from 'react'
 import {
   CalendarDays,
@@ -16,6 +16,30 @@ import Button from '../Ui/Button'
 
 const GOOGLE_APPS_SCRIPT_URL =
   'https://script.google.com/macros/s/AKfycbwwmrGa4z65zhRaW58ZONN50sW0OZ5n1lMWzAlb5Dr2zHElHsoR_oquvIkkxOZdHJwS/exec'
+
+const SUBMISSION_TIMEOUT_MS = 20000
+
+const errorFieldOrder: Array<keyof FormErrors> = [
+  'firstName',
+  'lastName',
+  'phone',
+  'email',
+  'condition',
+  'preferredDate',
+  'preferredTime',
+  'privacy',
+]
+
+const errorFieldSelectors: Record<keyof FormErrors, string> = {
+  firstName: '#firstName',
+  lastName: '#lastName',
+  phone: '#phone',
+  email: '#email',
+  condition: '#condition',
+  preferredDate: '#preferredDate',
+  preferredTime: '#preferredTime',
+  privacy: '#privacy',
+}
 
 interface FormErrors {
   firstName?: string
@@ -40,6 +64,7 @@ function ContactForm() {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [errors, setErrors] = useState<FormErrors>({})
   const [submitError, setSubmitError] = useState('')
+  const isSubmittingRef = useRef(false)
 
   const formattedDate = selectedDate
     ? selectedDate.toLocaleDateString('en-IN', {
@@ -60,6 +85,8 @@ function ContactForm() {
     const preferredDate = String(formData.get('preferredDate') || '').trim()
     const preferredTime = String(formData.get('preferredTime') || '').trim()
     const privacy = formData.get('privacy')
+    const today = new Date()
+    today.setHours(0, 0, 0, 0)
 
     const newErrors: FormErrors = {}
 
@@ -89,6 +116,15 @@ function ContactForm() {
 
     if (!preferredDate) {
       newErrors.preferredDate = 'Please select your preferred date.'
+    } else {
+      const selectedAppointmentDate = new Date(`${preferredDate}T00:00:00`)
+
+      if (
+        Number.isNaN(selectedAppointmentDate.getTime()) ||
+        selectedAppointmentDate < today
+      ) {
+        newErrors.preferredDate = 'Please select today or a future date.'
+      }
     }
 
     if (!preferredTime) {
@@ -102,10 +138,27 @@ function ContactForm() {
     return newErrors
   }
 
+  const focusFirstInvalidField = (validationErrors: FormErrors) => {
+    const firstInvalidField = errorFieldOrder.find(
+      (fieldName) => validationErrors[fieldName],
+    )
+
+    if (!firstInvalidField) return
+
+    requestAnimationFrame(() => {
+      const field = document.querySelector<HTMLElement>(
+        errorFieldSelectors[firstInvalidField],
+      )
+
+      field?.focus({ preventScroll: true })
+      field?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    })
+  }
+
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
-    if (isSubmitting) return
+    if (isSubmittingRef.current) return
 
     const form = event.currentTarget
     const validationErrors = validateForm(form)
@@ -113,12 +166,26 @@ function ContactForm() {
     setErrors(validationErrors)
 
     if (Object.keys(validationErrors).length > 0) {
+      focusFirstInvalidField(validationErrors)
       return
     }
 
+    if (!navigator.onLine) {
+      setSubmitError(
+        'You appear to be offline. Please reconnect and try submitting again.',
+      )
+      return
+    }
+
+    isSubmittingRef.current = true
     setIsSubmitting(true)
     setSubmitError('')
     setIsSubmitted(false)
+
+    const controller = new AbortController()
+    const timeoutId = window.setTimeout(() => {
+      controller.abort()
+    }, SUBMISSION_TIMEOUT_MS)
 
     try {
       const formData = new FormData(form)
@@ -135,12 +202,21 @@ function ContactForm() {
         privacyAccepted: Boolean(formData.get('privacy')),
       }
 
+      if (String(formData.get('website') || '').trim()) {
+        setIsSubmitted(true)
+        form.reset()
+        setSelectedDate(undefined)
+        setIsCalendarOpen(false)
+        return
+      }
+
       const response = await fetch(GOOGLE_APPS_SCRIPT_URL, {
         method: 'POST',
         headers: {
           'Content-Type': 'text/plain;charset=utf-8',
         },
         body: JSON.stringify(appointmentData),
+        signal: controller.signal,
       })
 
       if (!response.ok) {
@@ -163,11 +239,18 @@ function ContactForm() {
       setTimeout(() => {
         setIsSubmitted(false)
       }, 5000)
-    } catch {
+    } catch (error) {
+      const isTimeout =
+        error instanceof DOMException && error.name === 'AbortError'
+
       setSubmitError(
-        'We could not submit your appointment right now. Please try again or contact us directly.',
+        isTimeout
+          ? 'The request took too long to confirm. It may have reached us, so please wait a minute before retrying or contact us directly.'
+          : 'We could not submit your appointment right now. Your details are still here, so you can retry or contact us directly.',
       )
     } finally {
+      window.clearTimeout(timeoutId)
+      isSubmittingRef.current = false
       setIsSubmitting(false)
     }
   }
@@ -226,6 +309,15 @@ function ContactForm() {
 
       {/* Appointment Form */}
       <form onSubmit={handleSubmit} noValidate className="min-w-0">
+        <input
+          type="text"
+          name="website"
+          tabIndex={-1}
+          autoComplete="off"
+          className="hidden"
+          aria-hidden="true"
+        />
+
         <div className="grid gap-x-6 gap-y-3.5 md:grid-cols-2">
           {/* First Name */}
           <div>
@@ -608,8 +700,12 @@ function ContactForm() {
         </div>
 
         <div className="mt-3">
-          <label className="flex items-start gap-3 text-xs font-medium text-[var(--color-heading)]">
+          <label
+            htmlFor="privacy"
+            className="flex items-start gap-3 text-xs font-medium text-[var(--color-heading)]"
+          >
             <input
+              id="privacy"
               type="checkbox"
               name="privacy"
               className="mt-0.5 h-4 w-4 shrink-0 rounded border-[var(--color-border)] accent-[var(--color-primary-blue)]"
@@ -640,7 +736,7 @@ function ContactForm() {
             type="submit"
             variant="primary"
             disabled={isSubmitting}
-            className="w-full py-3"
+            className="w-full py-3 disabled:cursor-not-allowed disabled:opacity-70"
           >
             {isSubmitting ? 'Submitting...' : 'Book Appointment'}
           </Button>
